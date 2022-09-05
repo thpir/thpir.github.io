@@ -1,0 +1,5 @@
+#E8F1F2 //azure x 11 web color
+#B3EFB2 //granny smith apple
+#7A9E7E //russian green
+#31493C //msu green
+#001A23 //rich black fogra29
