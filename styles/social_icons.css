@@ -1,32 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #28464B;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #931621;
+}
+
+h3 {
+  margin-bottom: 15px;
+  color: #2C8C99;
+}
+
+p {
+  color: #E8F1F2;
+}
+
+header {
+  padding: 10px;
+}
+
+header ul {
+  display: inline;
+}
+
+header a:hover {
+  color: #931621;
+}
+
+header a {
+  color: #42D9C8;
+  text-decoration:none;
+}
+
+nav {
+  text-align: end;
+}
+
+header li {
+  display: inline;
+  padding-right: 10px;
+  color: #42D9C8;
+  ;
+}
+
+cite {
+  font-style: italic;
+}
+
+footer {
+  padding: 10px;
+  text-align: center;
+}
+
+footer p {
+  color: #42D9C8;
+
+}
+
+.inline_link {
+  text-decoration: none;
+  color: #42D9C8;
+}
+
+.inline_link:hover {
+  color: #931621;
+}
+
 /* Style all font awesome icons */
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  /* Add a hover effect if you want */
-  .fa:hover {
-    color: #B3EFB2;
-  }
-  
-  /* Set a specific color for each brand */
-  
-  /* Facebook */
-  .fa-linkedin {
-    background: #7A9E7E;
-    color: #E8F1F2;
-  }
-  
-  /* Twitter */
-  .fa-android {
-    background: #7A9E7E;
-    color: #E8F1F2;
-  }
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
 
-  .fa-github {
-    background: #7A9E7E;
-    color: #E8F1F2;
-  }
+/* Add a hover effect if you want */
+.fa:hover {
+  color: #931621;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-linkedin {
+  color: #42D9C8;
+}
+
+/* Twitter */
+.fa-android {
+  color: #42D9C8;
+}
+
+.fa-github {
+  color: #42D9C8;
+}
