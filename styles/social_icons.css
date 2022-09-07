@@ -10,41 +10,19 @@ body, html {
 
 /*** HEADER ***/
 
-header {
-  padding: 10px;
+#navBar {
+  background-color: #28464B !important;
 }
 
-header nav {
-  margin: 0;
-  overflow: hidden;
+#hrefAboutMe, #hrefEducation, #hrefExperience, #hrefContact {
+  color:#42D9C8 !important;
+  border-left: 1px solid #931621 !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }
 
-header nav ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-header nav ul li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-header nav ul li a {
-  display: block;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration:none;
-  color: #42D9C8;
-  border-left: 1px solid #931621;
-}
-
-header nav ul li a:hover {
-  color: #931621;
-}
-
-header nav ul li:first-child {
-  margin-right: auto;
+#hrefAboutMe:hover, #hrefEducation:hover, #hrefExperience:hover, #hrefContact:hover {
+  color: #931621 !important;
 }
 
 /*** BODY ***/
