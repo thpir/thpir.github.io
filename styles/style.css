@@ -67,7 +67,6 @@ p {
 }
 
 .container {
-  float: center;
   overflow: auto;
 }
 
