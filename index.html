@@ -164,10 +164,27 @@
                                 <a id="DownloadMyEnergyDesk" class="inline_link" href="https://play.google.com/store/apps/details?id=com.thpir.myenergydesk&gl=BE" target="blank">Download the application</a>
                             </div>
                             <div class="project">
+                                <h5>Serial Communicator app</h5>
+                                <img alt="Serial Communicator app logo" class="app-icon" src="media/SerialCommunicatorLogo.png" height="100" width="100"/>
+                                <p class="project-description">This application is developed to send or control an arduino with your mobile phone by sending commands over serial communication.
+                                    In theory this application could be used with other serial devices as well.
+                                    Simply connect your smartphone to the Arduino with a USB-cable, scan for devices, and connect to the microcontroller. 
+                                    In a textfield the user can enter single characters, numbers, or any other data. 
+                                    When the send command is given, the application converts it to a byteArray and sends it over to the Arduino. 
+                                    As soon as the connection has been establised the application periodically "listens" for any data send from the serial device to the smartphone.
+                                    I've included a very simple arduino code to test the application. 
+                                    The code is designed to control an LED by sending the "x" or "o" character.</p>
+                                <p>Tags: Kotlin, Android Studio, Serial Communication, felHR85/UsbSerial, Arduino</p>
+                                <a id="DownloadSerialCommunicator" class="inline_link" href="https://github.com/thpir/Serial-Communicator/releases/tag/V1.0.1" target="blank">Download the application</a>
+                                <br/>
+                                <a id="DownloadSerialCommunicatorRepo" class="inline_link" href="https://github.com/thpir/Serial-Communicator" target="blank">Source code</a>
+                            </div>
+                            <div class="project">
                                 <h5>Stand Up app</h5>
                                 <img alt="Stand Up app logo" class="app-icon" src="media/StandUpLogo.png" height="100" width="100"/>
-                                <p class="project-description">An Android application that notifies the user to stand up and move around at specific intervals. 
+                                <p class="project-description">An Android application that notifies the user to stand up and move around at specific intervals (15 minutes, 30 minutes, 1 hour or 2 hours). 
                                     The user can choose a time frame during the day in which he/she wants to get notified to move around and stretch. 
+                                    The user can also choose to be notified only during the working days.
                                     This project was a fun side project to practice on delivering notifications at a specific interval, 
                                     which I needed for my other app: My Energy Desk.</p>
                                 <p>Tags: Java, Android Studio</p>
