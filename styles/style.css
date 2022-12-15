@@ -16,6 +16,7 @@ body {
 
 #navBar {
   background-color: #292F36 !important;
+  box-shadow: 0 0 5px #000000;
 }
 
 #hrefAboutMe, #hrefEducation, #hrefExperience, #hrefContact {
@@ -53,6 +54,10 @@ p {
   color: #E8F1F2;
   border-left: 1px solid #931621;
   padding-left: 10px;
+}
+
+main {
+  padding-top: 25px;
 }
 
 .timeline-bg {
