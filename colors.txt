@@ -1,5 +1,0 @@
-#292F36 - Dark background
-#42D9C8	- Light teal accent1
-#2C8C99 - Dark teal titles
-#931621 - Dark red accent 2
-#E8F1F2 - Light text
