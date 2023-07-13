@@ -1,7 +1,7 @@
 <template>
     <div class="about">
       <h3>ABOUT ME</h3>
-      <img src="../../public/images/profile_picture.png"/>
+      <img src="/src/assets/images/profile_picture.png"/>
       <div class="about-text">
         <p>Hi! My name is Thijs Pirmez and I'm an app developer and front-end web developer. 
           I started my software career as a self-thought Android developer. 

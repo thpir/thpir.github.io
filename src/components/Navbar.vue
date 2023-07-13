@@ -1,15 +1,17 @@
 <script setup>
   import { RouterLink } from 'vue-router'
+
+  import logoUrl from '@/assets/images/logo.png'
 </script>
 
 <template>
   <div class="navbar">
-    <img src="../../public/images/logo.png" alt="THPIR logo" title="THPIR logo" height="50" />
+    <img :src="logoUrl" alt="THPIR logo" title="THPIR logo" height="50" />
     <div class="navbar-links">
-      <RouterLink active-class="active" to="/"><div class="link"><img src="../../public/images/icon_home_white_24dp.svg"/><p>Home</p></div></RouterLink>
-      <RouterLink active-class="active" to="/about"><div class="link"><img src="../../public/images/icon_person_white_24dp.svg"/><p>about</p></div></RouterLink>
-      <RouterLink active-class="active" to="/education"><div class="link"><img src="../../public/images/icon_school_white_24dp.svg"/><p>Education</p></div></RouterLink>
-      <RouterLink active-class="active" to="/projects"><div class="link"><img src="../../public/images/icon_workspace_premium_white_24dp.svg"/><p>Projects</p></div></RouterLink>
+      <RouterLink active-class="active" to="/"><div class="link"><img src="/src/assets/images/icon_home_white_24dp.svg"/><p>Home</p></div></RouterLink>
+      <RouterLink active-class="active" to="/about"><div class="link"><img src="/src/assets/images/icon_person_white_24dp.svg"/><p>about</p></div></RouterLink>
+      <RouterLink active-class="active" to="/education"><div class="link"><img src="/src/assets/images/icon_school_white_24dp.svg"/><p>Education</p></div></RouterLink>
+      <RouterLink active-class="active" to="/projects"><div class="link"><img src="/src/assets/images/icon_workspace_premium_white_24dp.svg"/><p>Projects</p></div></RouterLink>
     </div>
   </div>
 </template>

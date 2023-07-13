@@ -17,7 +17,7 @@
                             <div class="info">
                             <div class="title">
                               <h4>Computer Science</h4>
-                              <img src="../../public/images/software_computer_science.svg"/>
+                              <img src="/src/assets/images/software_computer_science.svg"/>
                             </div>
                             <p>When you are learning something new it is best to start at the beginning and build your knowledge from there. 
                                 To really understand app-development I first needed to know more about computer science. 
@@ -31,7 +31,7 @@
                             <div class="info">
                             <div class="title">
                               <h4>Native Android</h4>
-                              <img src="../../public/images/software_android.svg"/>
+                              <img src="/src/assets/images/software_android.svg"/>
                             </div>
                             <p>This is where it all started for me. 
                                 Online, I found a short tutorial for a "hello world" app in Android Studio. 
@@ -46,7 +46,7 @@
                             <div class="info">
                             <div class="title">
                               <h4>Native iOS</h4>
-                              <img src="../../public/images/software_apple.svg"/>
+                              <img src="/src/assets/images/software_apple.svg"/>
                             </div>
                             <p>My path as a native iOS developer only started when I started working as an Android and iOS developer in the research department of the Howest University. 
                                 My native experience in iOS is "entry level". To get my native iOS & swift knowledge jumpstarted, I followed Angela's high rated course on Udemy: <a href="https://www.udemy.com/course/ios-13-app-development-bootcamp/" target="_blank" class="inline_link">iOS & Swift - The complete iOS App development bootcamp</a>. 
@@ -59,7 +59,7 @@
                             <div class="info">
                             <div class="title">
                               <h4>Cross Platform</h4>
-                              <img src="../../public/images/software_flutter.svg"/>
+                              <img src="/src/assets/images/software_flutter.svg"/>
                             </div>
                             <p>This is my focus at this moment. I stronly believe that cross platform development is THE standard at this time. 
                                 Some frameworks like Flutter and React Native have really shown their potential at this time. 
@@ -74,7 +74,7 @@
                             <div class="info">
                             <div class="title">
                               <h4>Web</h4>
-                              <img src="../../public/images/software_vue.svg"/>
+                              <img src="/src/assets/images/software_vue.svg"/>
                             </div>
                             <p>As an app developer I also wanted to have at least some experience in web development. 
                                 Often when creating an application there is the question: should I go for an application or do I just make a web-application? 
