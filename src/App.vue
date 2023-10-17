@@ -18,8 +18,9 @@
   main {
     background-color: #1a1a36;
     height: 100vh;
-    width: 100%;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
