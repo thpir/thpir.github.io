@@ -16,6 +16,7 @@ class EducationScreen extends StatelessWidget {
             alignment: TimelineAlign.start,
             beforeLineStyle: const LineStyle(
               color: accentColor2,
+              thickness: 1,
             ),
             indicatorStyle: const IndicatorStyle(color: accentColor2),
             endChild: EducationTile(

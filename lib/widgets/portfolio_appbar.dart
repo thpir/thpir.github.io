@@ -9,6 +9,57 @@ class PortfolioAppbar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Provider.of<NavigationController>(context);
+    final width = MediaQuery.of(context).size.width;
+
+    List<Widget> smallAppBar() {
+      List<Widget> appBarActions = [];
+      for (int i = 0; i < 4; i++) {
+        appBarActions.add(
+          IconButton(
+              hoverColor: accentColor1,
+              onPressed: () => controller.navigationTapped(i),
+              icon: Icon(
+                controller.screens[i].icon,
+                color: controller.screen == i
+                    ? onPrimaryActive
+                    : onPrimaryInactive,
+              )),
+        );
+      }
+      return appBarActions;
+    }
+
+    List<Widget> largeAppBar() {
+      List<Widget> appBarActions = [];
+      for (int i = 0; i < 4; i++) {
+        appBarActions.add(
+          Container(
+            width: 130,
+            padding: const EdgeInsets.symmetric(vertical: 2),
+            decoration: BoxDecoration(
+              border: Border.symmetric(horizontal: controller.screen == i
+                    ? const BorderSide(color: accentColor2)
+                    : BorderSide.none)
+            ),
+            child: TextButton.icon(
+                onPressed: () => controller.navigationTapped(i),
+                icon: Icon(
+                  controller.screens[i].icon,
+                  color: onPrimaryActive,
+                ), 
+                label: Text(
+                  controller.screens[i].name,
+                  style: const TextStyle(
+                    color: onPrimaryActive
+                  ),
+                ),
+            ),
+          ),
+        );
+      }
+      return appBarActions;
+    }
+
     return AppBar(
       backgroundColor: primaryColor,
       title: Image.asset(
@@ -17,40 +68,7 @@ class PortfolioAppbar extends StatelessWidget implements PreferredSizeWidget {
         height: 36,
       ),
       centerTitle: false,
-      actions: [
-        IconButton(
-            hoverColor: accentColor1,
-            onPressed: () => controller.navigationTapped(0),
-            icon: Icon(
-              Icons.home,
-              color:
-                  controller.screen == 0 ? onPrimaryActive : onPrimaryInactive,
-            )),
-        IconButton(
-            hoverColor: accentColor1,
-            onPressed: () => controller.navigationTapped(1),
-            icon: Icon(
-              Icons.person,
-              color:
-                  controller.screen == 1 ? onPrimaryActive : onPrimaryInactive,
-            )),
-        IconButton(
-            hoverColor: accentColor1,
-            onPressed: () => controller.navigationTapped(2),
-            icon: Icon(
-              Icons.school,
-              color:
-                  controller.screen == 2 ? onPrimaryActive : onPrimaryInactive,
-            )),
-        IconButton(
-            hoverColor: accentColor1,
-            onPressed: () => controller.navigationTapped(3),
-            icon: Icon(
-              Icons.workspace_premium,
-              color:
-                  controller.screen == 3 ? onPrimaryActive : onPrimaryInactive,
-            )),
-      ],
+      actions: width > 800 ? largeAppBar() : smallAppBar()
     );
   }
 

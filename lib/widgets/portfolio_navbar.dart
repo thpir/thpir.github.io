@@ -60,9 +60,16 @@ class PortfolioNavbar extends StatelessWidget {
           ),
           const Padding(
             padding: EdgeInsets.only(bottom: 16.0),
-            child: Text(
-              'Desgned & Built by Thijs Pirmez',
-              style: TextStyle(color: onPrimaryActive),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  'Made by Thijs Pirmez, created with ',
+                style: TextStyle(color: onPrimaryActive),
+                ),
+                FlutterLogo(size: 16,)
+              ]
             ),
           ),
         ],

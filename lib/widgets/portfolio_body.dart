@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:parallax_rain/parallax_rain.dart';
 import 'package:portfolio/controllers/navigation_controller.dart';
 import 'package:portfolio/global_variables.dart';
+import 'package:portfolio/models/screen.dart';
 import 'package:portfolio/widgets/bottom_navigation_extension.dart';
 import 'package:provider/provider.dart';
 
@@ -11,6 +12,15 @@ class PortfolioBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Provider.of<NavigationController>(context);
+
+    List<Widget> screens() {
+      List<Widget> screenList = [];
+      for(Screen screen in controller.screens) {
+        screenList.add(screen.screen);
+      }
+      return screenList;
+    }
+
     return Container(
         height: double.infinity,
         width: double.infinity,
@@ -32,7 +42,7 @@ class PortfolioBody extends StatelessWidget {
             PageView(
               controller: controller.pageController,
               onPageChanged: controller.onPageChanged,
-              children: controller.screens,
+              children: screens(),
             ),
             const BottomNavigationExtension()
           ],
