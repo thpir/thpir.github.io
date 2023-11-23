@@ -1,7 +1,7 @@
 <template>
     <div class="home">
       <h1>THIJS PIRMEZ</h1>
-      <h3>APP DEVELOPER, FRONT END WEB DEVELOPER</h3>
+      <h3>APP DEVELOPER</h3>
       <div class="cite">
         <cite>&#34;I think smartphones are modern man's Swiss army knife.
         When it comes to developing applications to make one's live easier, 
