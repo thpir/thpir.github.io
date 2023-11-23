@@ -3,7 +3,7 @@
       <h3>ABOUT ME</h3>
       <img src="/src/assets/images/profile_picture.png"/>
       <div class="about-text">
-        <p>Hi! My name is Thijs Pirmez and I'm an app developer and front-end web developer. 
+        <p>Hi! My name is Thijs Pirmez and I'm an app developer. 
           I started my software career as a self-thought Android developer. 
           Not as a career, but more as a hobby. 
           In fact, I've been working as a technician in Wind turbines and a Project Manager and R&D engineer in the automotive industry prior to becoming a software developer. 
@@ -21,7 +21,7 @@
           <a href="https://github.com/thpir/Tic-Tac-Toe/releases/tag/Tic-Tac-Toe_v1.0" target="_blank" class="inline_link">app</a>. 
           Two years after my first Android App, I decided to take a leap of faith, and switch from R&D engineer to Android & iOS developer. 
           I have been working under this title ever since! 
-          I now mainly create applications using the Flutter framework, but I have experience with native Android an iOS and web development.
+          I now mainly create applications using the Flutter framework, but I have some experience with native Android an iOS and web development.
         </p>
       </div>
     </div>
