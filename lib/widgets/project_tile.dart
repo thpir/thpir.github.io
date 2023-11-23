@@ -1,3 +1,5 @@
+import 'dart:js' as js;
+
 import 'package:flutter/material.dart';
 import 'package:portfolio/controllers/navigation_controller.dart';
 import 'package:portfolio/global_variables.dart';
@@ -39,10 +41,31 @@ class ProjectTile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           content: SingleChildScrollView(
-            child: Text(
-              project.description,
-              style: const TextStyle(
-                  color: onPrimaryActive, fontSize: 16, letterSpacing: 1.2),
+            child: Column(
+              children: [
+                Text(
+                  project.description,
+                  style: const TextStyle(
+                      color: onPrimaryActive, fontSize: 16, letterSpacing: 1.2),
+                ),
+                Padding(
+              padding: const EdgeInsets.only(top: 16.0),
+              child: ElevatedButton(
+                onPressed: () {
+                  js.context.callMethod('open', [project.downloadLink]);
+                },
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.resolveWith((_) {
+                    return accentColor1;
+                  }),
+                ),
+                child: const Text(
+                  "Download app",
+                  style: TextStyle(color: onPrimaryActive),
+                ),
+              ),
+            ),
+              ],
             ),
           ),
           backgroundColor: backgroundColor,
