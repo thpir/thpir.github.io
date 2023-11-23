@@ -3,6 +3,7 @@ class Project {
   final String description;
   final String icon;
   final String downloadLink;
+  final int id;
   final List<String> screenshots;
 
   Project({
@@ -10,6 +11,7 @@ class Project {
     required this.description,
     required this.icon,
     required this.downloadLink,
+    required this.id,
     this.screenshots = const [],
   });
 }

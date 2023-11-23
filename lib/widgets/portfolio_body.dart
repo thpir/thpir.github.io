@@ -33,6 +33,7 @@ class PortfolioBody extends StatelessWidget {
               ],
               dropWidth: .5,
               dropFallSpeed: .4,
+              trail: true,
             ),
             Container(
               width: double.infinity,
