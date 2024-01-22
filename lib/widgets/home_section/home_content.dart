@@ -9,8 +9,8 @@ class HomeContent extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
     return Center(
       child: Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: getScreenPadding(width), vertical: 50),
+        padding: EdgeInsets.only(
+            left: getScreenPadding(width), right: getScreenPadding(width), top: 50, bottom: 50 + width / 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,

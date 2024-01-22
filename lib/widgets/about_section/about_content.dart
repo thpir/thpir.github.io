@@ -10,7 +10,7 @@ class AboutContent extends StatelessWidget {
     return Center(
       child: Padding(
         padding: EdgeInsets.symmetric(
-            horizontal: getScreenPadding(width), vertical: 50),
+            horizontal: getScreenPadding(width), vertical: 50 + width / 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,

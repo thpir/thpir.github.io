@@ -2,8 +2,10 @@ import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/controllers/navigation_controller.dart';
 import 'package:portfolio/global_variables.dart';
 import 'package:portfolio/widgets/clippers/navbar_skew_cut.dart';
+import 'package:provider/provider.dart';
 
 class PortfolioNavbar extends StatelessWidget {
   const PortfolioNavbar({super.key});
@@ -11,9 +13,11 @@ class PortfolioNavbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
+    final controller = Provider.of<NavigationController>(context);
     return ClipPath(
       clipper: NavBarSkewCut(clipheight: width/10),
       child: Container(
+        key: controller.bottomNavigationKey,
         padding: EdgeInsets.only(top: width / 10),
         width: double.infinity,
         color: primaryColor,
