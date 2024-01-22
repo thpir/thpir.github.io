@@ -1,8 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/data/project_list.dart';
 import 'package:portfolio/global_variables.dart';
+import 'package:portfolio/models/project.dart';
+import 'package:portfolio/widgets/projects_section/project_detail.dart';
 
 class ProjectsContent extends StatelessWidget {
   const ProjectsContent({super.key});
+
+  List<Widget> list(double width) {
+    List<Widget> projectList = [];
+    for (Project project in ProjectList.projectList) {
+      projectList.add(
+        ProjectDetail(
+          width: width,
+          height: width / 2,
+          project: project,
+        ),
+      );
+    }
+    return projectList;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +34,7 @@ class ProjectsContent extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
-              'COMING SOON',
+              'PROJECTS',
               style: TextStyle(
                   color: primaryColor,
                   fontSize: getSubtitleFontSize(width),
@@ -25,6 +42,10 @@ class ProjectsContent extends StatelessWidget {
                   letterSpacing: getSubtitleFontSize(width) * 0.15),
               textAlign: TextAlign.center,
             ),
+            SizedBox(
+              height: getDividerHeight(width),
+            ),
+            ...list(width)
           ],
         ),
       ),

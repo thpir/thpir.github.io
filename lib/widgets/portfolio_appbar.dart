@@ -62,10 +62,13 @@ class PortfolioAppbar extends StatelessWidget implements PreferredSizeWidget {
 
     return AppBar(
       backgroundColor: primaryColor,
-      title: Image.asset(
-        'assets/images/logo.png',
-        fit: BoxFit.contain,
-        height: 36,
+      title: GestureDetector(
+        onTap: () => controller.navigationTapped(0),
+        child: Image.asset(
+          'assets/images/logo.png',
+          fit: BoxFit.contain,
+          height: 36,
+        ),
       ),
       centerTitle: false,
       actions: width > 800 ? largeAppBar() : smallAppBar()

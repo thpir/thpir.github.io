@@ -48,6 +48,9 @@ class NavigationController extends ChangeNotifier {
     );
   }
 
+  // Method do determine which widget in the listview of our portfolio is 
+  // currently visible. Tutorial found on: 
+  // https://medium.com/@tkarmakar27112000/renderbox-in-flutter-locating-center-widget-in-a-listview-builder-d00499059f19
   int getCenterItemIndex() {
     final listViewBox =
         listViewKey.currentContext!.findRenderObject() as RenderBox;

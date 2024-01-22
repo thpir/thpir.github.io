@@ -18,28 +18,52 @@ class ProjectDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding: const EdgeInsets.all(50),
+        padding: const EdgeInsets.symmetric(vertical: 50),
         child: Column(
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+            width > 700 
+              ? Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    foregroundImage: AssetImage(project.icon),
+                    backgroundColor: accentColor1,
+                    radius: 40,
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Text(
+                    project.title,
+                    style: TextStyle(
+                        color: primaryColor,
+                        fontSize: getSubtitleFontSize(width),
+                        fontWeight: FontWeight.bold,
+                        letterSpacing: getSubtitleFontSize(width) * 0.15),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ) 
+              : Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                CircleAvatar(
-                  foregroundImage: AssetImage(project.icon),
-                  backgroundColor: accentColor1,
-                  radius: 40,
-                ),
-                const SizedBox(
-                  width: 20,
-                ),
                 Text(
                   project.title,
                   style: TextStyle(
-                      color: onPrimaryActive,
+                      color: primaryColor,
                       fontSize: getSubtitleFontSize(width),
                       fontWeight: FontWeight.bold,
                       letterSpacing: getSubtitleFontSize(width) * 0.15),
                   textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CircleAvatar(
+                  foregroundImage: AssetImage(project.icon),
+                  backgroundColor: accentColor1,
+                  radius: 40,
                 ),
               ],
             ),
@@ -49,7 +73,7 @@ class ProjectDetail extends StatelessWidget {
             Text(
               project.description,
               style: const TextStyle(
-                  color: onPrimaryActive, fontSize: 16, letterSpacing: 1.5),
+                  color: primaryColor, fontSize: 16, letterSpacing: 1.5),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
