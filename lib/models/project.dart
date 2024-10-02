@@ -5,6 +5,7 @@ class Project {
   final String downloadLink;
   final int id;
   final List<String> screenshots;
+  final String company;
 
   Project({
     required this.title,
@@ -13,5 +14,6 @@ class Project {
     required this.downloadLink,
     required this.id,
     this.screenshots = const [],
+    this.company = "Personal project",
   });
 }

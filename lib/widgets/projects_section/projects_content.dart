@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/data/project_list.dart';
 import 'package:portfolio/global_variables.dart';
 import 'package:portfolio/models/project.dart';
+import 'package:portfolio/widgets/projects_section/project_card.dart';
 import 'package:portfolio/widgets/projects_section/project_detail.dart';
 
 class ProjectsContent extends StatelessWidget {
@@ -11,11 +12,12 @@ class ProjectsContent extends StatelessWidget {
     List<Widget> projectList = [];
     for (Project project in ProjectList.projectList) {
       projectList.add(
-        ProjectDetail(
-          width: width,
-          height: width / 2,
-          project: project,
-        ),
+        ProjectCard(project: project)
+        // ProjectDetail(
+        //   width: width,
+        //   height: width / 2,
+        //   project: project,
+        // ),
       );
     }
     return projectList;
@@ -45,7 +47,11 @@ class ProjectsContent extends StatelessWidget {
             SizedBox(
               height: getDividerHeight(width),
             ),
-            ...list(width)
+            Wrap(
+              children: [
+                ...list(width)
+              ],
+            )
           ],
         ),
       ),
