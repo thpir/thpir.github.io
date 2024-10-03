@@ -58,7 +58,9 @@ class ProjectCard extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 16.0),
             child: TextButton(
-              onPressed: () {}, 
+              onPressed: () {
+                Navigator.pushNamed(context, project.route, arguments: project);
+              }, 
               child: const Text(
                 "Read more",
                 style: TextStyle(

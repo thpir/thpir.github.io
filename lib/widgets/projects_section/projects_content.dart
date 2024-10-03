@@ -3,7 +3,6 @@ import 'package:portfolio/data/project_list.dart';
 import 'package:portfolio/global_variables.dart';
 import 'package:portfolio/models/project.dart';
 import 'package:portfolio/widgets/projects_section/project_card.dart';
-import 'package:portfolio/widgets/projects_section/project_detail.dart';
 
 class ProjectsContent extends StatelessWidget {
   const ProjectsContent({super.key});

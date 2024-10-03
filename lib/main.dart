@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/controllers/navigation_controller.dart';
+import 'package:portfolio/data/project_list.dart';
 import 'package:portfolio/global_variables.dart';
 import 'package:portfolio/screens/portfolio.dart';
-import 'package:portfolio/widgets/portfolio_appbar.dart';
+import 'package:portfolio/screens/project_energy_desk.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -14,16 +15,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Thijs Pirmez',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
-        useMaterial3: true,
+    return ChangeNotifierProvider(
+      create: (_) => NavigationController(),
+      child: MaterialApp(
+        title: 'Thijs Pirmez',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: primaryColor),
+          useMaterial3: true,
+        ),
+        home: const ResponsiveLayout(),
+        routes: {
+          '/project_energy_desk': (context) => ProjectEnergyDesk(ProjectList.projectList[0]),
+        },
       ),
-      home: ChangeNotifierProvider(
-          create: (_) => NavigationController(),
-          child: const ResponsiveLayout()),
     );
   }
 }
@@ -45,9 +50,6 @@ class _ResponsiveLayoutState extends State<ResponsiveLayout> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: PortfolioAppbar(),
-      body: Portfolio(),
-    );
+    return const Portfolio();
   }
 }

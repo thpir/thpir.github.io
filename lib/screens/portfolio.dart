@@ -4,6 +4,7 @@ import 'package:portfolio/global_variables.dart';
 import 'package:portfolio/widgets/about_section/about_section.dart';
 import 'package:portfolio/widgets/education_section/education_section.dart';
 import 'package:portfolio/widgets/home_section/home_section.dart';
+import 'package:portfolio/widgets/portfolio_appbar.dart';
 import 'package:portfolio/widgets/portfolio_navbar.dart';
 import 'package:portfolio/widgets/projects_section/project_section.dart';
 import 'package:provider/provider.dart';
@@ -23,13 +24,17 @@ class Portfolio extends StatelessWidget {
       const PortfolioNavbar()
     ];
     
-    return Container(
-      color: onPrimaryActive,
-      child: SingleChildScrollView(
-        key: controller.listViewKey,
-        controller: controller.scrollController,
-        child: Column(
-          children: portfolioContent,
+    return Scaffold(
+      appBar: const PortfolioAppbar(),
+      backgroundColor: primaryColor,
+      body: Container(
+        color: onPrimaryActive,
+        child: SingleChildScrollView(
+          key: controller.listViewKey,
+          controller: controller.scrollController,
+          child: Column(
+            children: portfolioContent,
+          ),
         ),
       ),
     );
