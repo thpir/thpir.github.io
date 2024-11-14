@@ -9,15 +9,10 @@ class ProjectsContent extends StatelessWidget {
 
   List<Widget> list(double width) {
     List<Widget> projectList = [];
-    for (Project project in ProjectList.projectList) {
-      projectList.add(
-        ProjectCard(project: project)
-        // ProjectDetail(
-        //   width: width,
-        //   height: width / 2,
-        //   project: project,
-        // ),
-      );
+    List<Project> sortedList = ProjectList.projectList;
+    sortedList.sort((a, b) => a.company.compareTo(b.company));
+    for (Project project in sortedList) {
+      projectList.add(ProjectCard(project: project));
     }
     return projectList;
   }
@@ -47,9 +42,7 @@ class ProjectsContent extends StatelessWidget {
               height: getDividerHeight(width),
             ),
             Wrap(
-              children: [
-                ...list(width)
-              ],
+              children: [...list(width)],
             )
           ],
         ),

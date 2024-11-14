@@ -1,5 +1,5 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:js' as js;
+//import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -7,6 +7,7 @@ import 'package:portfolio/controllers/navigation_controller.dart';
 import 'package:portfolio/global_variables.dart';
 import 'package:portfolio/widgets/clippers/navbar_skew_cut.dart';
 import 'package:provider/provider.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PortfolioNavbar extends StatelessWidget {
   const PortfolioNavbar({super.key});
@@ -34,8 +35,11 @@ class PortfolioNavbar extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                   child: IconButton(
                       hoverColor: accentColor1,
-                      onPressed: () {
-                            js.context.callMethod('open', ['https://be.linkedin.com/in/thijs-pirmez-973327230']);
+                      onPressed: () async {
+                        final Uri url = Uri.parse(
+                            'https://be.linkedin.com/in/thijs-pirmez-973327230');
+                        await launchUrl(url);
+                            //js.context.callMethod('open', ['https://be.linkedin.com/in/thijs-pirmez-973327230']);
                       },
                       icon: const Icon(
                         FontAwesomeIcons.linkedinIn,
@@ -46,8 +50,11 @@ class PortfolioNavbar extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                   child: IconButton(
                       hoverColor: accentColor1,
-                      onPressed: () {
-                        js.context.callMethod('open', ['https://g.dev/thpir']);
+                      onPressed: () async {
+                        final Uri url = Uri.parse(
+                            'https://g.dev/thpir');
+                        await launchUrl(url);
+                        //js.context.callMethod('open', ['https://g.dev/thpir']);
                       },
                       icon: const Icon(
                         FontAwesomeIcons.android,
@@ -58,8 +65,11 @@ class PortfolioNavbar extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 8, right: 8, bottom: 8),
                   child: IconButton(
                       hoverColor: accentColor1,
-                      onPressed: () {
-                        js.context.callMethod('open', ['https://github.com/thpir']);
+                      onPressed: () async {
+                        final Uri url = Uri.parse(
+                            'https://github.com/thpir');
+                        await launchUrl(url);
+                        //js.context.callMethod('open', ['https://github.com/thpir']);
                       },
                       icon: const Icon(
                         FontAwesomeIcons.github,

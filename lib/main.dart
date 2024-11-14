@@ -3,7 +3,7 @@ import 'package:portfolio/controllers/navigation_controller.dart';
 import 'package:portfolio/data/project_list.dart';
 import 'package:portfolio/global_variables.dart';
 import 'package:portfolio/screens/portfolio.dart';
-import 'package:portfolio/screens/project_energy_desk.dart';
+import 'package:portfolio/screens/project_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
         ),
         home: const ResponsiveLayout(),
         routes: {
-          '/project_energy_desk': (context) => ProjectEnergyDesk(ProjectList.projectList[0]),
+          '/project_energy_desk': (context) =>
+              ProjectScreen(ProjectList.projectList[0]),
         },
       ),
     );
