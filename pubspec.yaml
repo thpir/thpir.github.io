@@ -40,6 +40,7 @@ dependencies:
   timeline_tile: ^2.0.0
   flutter_svg: ^2.0.9
   url_launcher: ^6.3.1
+  flutter_launcher_icons: ^0.14.1
 
 dev_dependencies:
   flutter_test:
@@ -71,3 +72,11 @@ flutter:
     - assets/images/project_energy_desk/
     - assets/images/project_silo_connect_2/
 
+flutter_launcher_icons:
+  android: false
+  ios: false
+  web:
+    generate: true
+    image_path: "assets/images/launcher_icon.png"
+    background_color: "#1B1C38"
+    theme_color: "#1B1C38"
