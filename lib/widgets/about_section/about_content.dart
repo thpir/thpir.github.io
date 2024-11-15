@@ -29,7 +29,7 @@ class AboutContent extends StatelessWidget {
               height: getDividerHeight(width),
             ),
             const CircleAvatar(
-              backgroundImage: AssetImage('assets/images/profile_picture.png'),
+              backgroundImage: AssetImage('assets/images/profile_picture.webp'),
               radius: 120,
             ),
             SizedBox(

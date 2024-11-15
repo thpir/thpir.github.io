@@ -13,6 +13,14 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  Map<String, Widget Function(BuildContext)> getProjectRoutes() {
+    final Map<String, Widget Function(BuildContext)> routes = {};
+    for (final project in ProjectList.projectList) {
+      routes[project.route] = (context) => ProjectScreen(project);
+    }
+    return routes;
+  }
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -25,10 +33,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         home: const ResponsiveLayout(),
-        routes: {
-          '/project_energy_desk': (context) =>
-              ProjectScreen(ProjectList.projectList[0]),
-        },
+        routes: getProjectRoutes(),
       ),
     );
   }
